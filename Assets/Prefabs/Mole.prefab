@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17336961dd8ee9b4f9603f09427ebd8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 1.5
 --- !u!114 &7131301547578996478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91d7b5db929b224d9ae154ed3612ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTimeOnGround: 0.5
+  waitTimeOnGround: 0.1
   limitMinY: -0.3
   limitMaxY: 0.1

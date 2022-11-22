@@ -19,10 +19,19 @@ public class MoleFSM : MonoBehaviour
     // 두더지의 현재 상태 (set은 MoleFSM 클래스 내부에서만)
     public MoleState MoleState {private set; get;}
 
+    // 임의 레벨
+    int level = 1;
+
     private void Awake() 
     {
         movement3D = GetComponent<Movement>();
         ChangeState(MoleState.UnderGround);
+    }
+
+    void Update() 
+    {
+        if(level == 1)
+            waitTimeOnGround = 0.3f;
     }
 
     public void ChangeState(MoleState newState)
