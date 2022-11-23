@@ -13,6 +13,7 @@ public class Hammer : MonoBehaviour
     [SerializeField]
     private ObjectDectector objectDectector;
     private Movement movement3D;
+    public int hitCount = 0;   // 두더지 타격 횟수
 
     private void Awake() 
     {
@@ -45,6 +46,9 @@ public class Hammer : MonoBehaviour
             GameObject clone = Instantiate(moleHitEffectPrefab, transform.position, Quaternion.identity);
             ParticleSystem.MainModule main = clone.GetComponent<ParticleSystem>().main;
             main.startColor = mole.GetComponent<MeshRenderer>().material.color;
+
+            // 두더지 타격 횟수 증가
+            hitCount++;
 
             // 망치를 위로 이동
             StartCoroutine("MoveUp");
