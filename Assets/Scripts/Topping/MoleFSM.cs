@@ -16,13 +16,25 @@ public class MoleFSM : MonoBehaviour
 
     private Movement movement3D;  // 위/아래 이동을 위한 Movement3D
 
+    private MoleSpawner moleSpawner;
+
     // 두더지의 현재 상태 (set은 MoleFSM 클래스 내부에서만)
     public MoleState MoleState {private set; get;}
+
+    // 임의 레벨
+    int level = 1;
 
     private void Awake() 
     {
         movement3D = GetComponent<Movement>();
+        moleSpawner = GameObject.Find("MoleSpawner").GetComponent<MoleSpawner>();
         ChangeState(MoleState.UnderGround);
+    }
+
+    void Update() 
+    {
+        if(level == 1)
+            waitTimeOnGround = 0.3f;
     }
 
     public void ChangeState(MoleState newState)
@@ -88,6 +100,8 @@ public class MoleFSM : MonoBehaviour
     {
         // 이동 방향을 : (0, -1, 0) [아래]
         movement3D.MoveTo(Vector3.down);
+
+        moleSpawner.spawnCount++;
 
         while(true)
         {
