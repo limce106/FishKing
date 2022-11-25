@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
 
     private void Awake () 
     {
+        toppingGrade = GameObject.Find("GameMng").GetComponent<ToppingGrade>();
         time = 5f;
     }
 
@@ -19,12 +20,14 @@ public class Timer : MonoBehaviour
     {
         if(toppingGrade.grade.enabled == true)
         {
-            Invoke("StartTimer", 2f);
+            StartTimer();
         }
     }
 
     public void StartTimer()
     {
+        Invoke("StartTimer", 2f);
+        
         timer.gameObject.SetActive(true);
         if (time > 0)
             time -= Time.deltaTime;

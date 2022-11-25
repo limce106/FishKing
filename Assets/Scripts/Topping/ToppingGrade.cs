@@ -11,13 +11,13 @@ public class ToppingGrade : MonoBehaviour
     private float chance;
     public Text timer;
     public float time = 0; // ?? ???? ??? ??? ???? ?? ??
-    private string sab1;
-    private string sab2;
-    private string sab3;
+    public string sab1;
+    public string sab2;
+    public string sab3;
 
     void Start()
     {
-        grade = GameObject.Find("Grade").GetComponent<Text>();
+        //grade = GameObject.Find("Grade").GetComponent<Text>();
     }
 
     public void Topping_Grade()
