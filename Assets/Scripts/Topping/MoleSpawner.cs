@@ -17,7 +17,7 @@ public class MoleSpawner : MonoBehaviour
 
     private void Update() {
         // 레벨이 ~이고 모든 두더지가 나왔다면
-        if(spawnCount == 2)
+        if(spawnCount == 10)
         {
             // 모든 코루틴을 멈추고 등급 계산
             StopAllCoroutines();
