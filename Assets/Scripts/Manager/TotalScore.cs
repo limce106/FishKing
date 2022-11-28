@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TotalScore : MonoBehaviour
 {
-    private ToppingGrade tg;
+    private TotalGrade tg;
     private int score1;
     private int score2;
     private int score3;
@@ -13,7 +13,7 @@ public class TotalScore : MonoBehaviour
 
     void Start()
     {
-        tg = GetComponent<ToppingGrade>();
+        tg = GetComponent<TotalGrade>();
     }
 
     void Update()
@@ -50,21 +50,26 @@ public class TotalScore : MonoBehaviour
     void CalTotal()
     {
         totalScore = score1 + score2 + score3;
+
+        // 최종 점수에 따라 재화를 얻음
         if(totalScore >= 240) // S S A
         {
             // 코인
+            SingleTon.Instance.coin += 300;
         }
         else if(totalScore >= 150) // A A B
         {
             // 코인
+            SingleTon.Instance.coin += 200;
         }
         else
         {
             // 코인
+            SingleTon.Instance.coin += 100;
         }
     }
 
-    void GameOverClear()
+    public void GameOverClear()
     {
         if(totalScore >= 150)
         {
