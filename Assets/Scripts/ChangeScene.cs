@@ -15,10 +15,14 @@ public class ChangeScene : MonoBehaviour
     }
     public void GotoStartBtn()
     {
-        SceneManager.LoadScene("Startscene");
+        SceneManager.LoadScene("StartScene");
     }
     public void GameOff()
     {
         Application.Quit();
+    }
+    public void GotoDough()
+    {
+        SceneManager.LoadScene("Dough");
     }
 }

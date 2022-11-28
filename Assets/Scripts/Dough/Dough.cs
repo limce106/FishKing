@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class Dough : MonoBehaviour
 {
     public float gameTime; // 시간
-    int spaceCount = 0; //스페이스바 누른 횟수
+    public int spaceCount = 0; //스페이스바 누른 횟수
     string doughGrade = ""; // 반죽 완성도
 
     public Text timeText; // 시간 텍스트
     public Text spaceCountText; // 누른 횟수 텍스트
     public Text doughGradeText; // 반죽 완성도 텍스트
+
+    public TotalGrade totalGrade;
 
     // private bool isGameOver = false;
 
@@ -58,31 +60,7 @@ public class GameManager : MonoBehaviour
         }
         else // 게임 오버 일 때
         {
-            // 만약에 10초안에 + spaceCount가
-            // 30번 => s
-            // 20번 => a
-            // 15번이면 => b
-            if (spaceCount >= 30)
-            {
-                doughGrade = "S";
-                Debug.Log("S"); ;
-            }
-            else if (spaceCount >= 20)
-            {
-                doughGrade = "A";
-                Debug.Log("A");
-            }
-            else
-            {
-                doughGrade = "B";
-                Debug.Log("B");
-             }
-
-            doughGradeText.text = doughGrade + "급";
-            // 등급 보이게 하기
-            doughGradeText.gameObject.SetActive(true);
-
-            Debug.Log("Gameover");
+            totalGrade.PrintGrade();
         }
         
     }

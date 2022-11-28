@@ -31,8 +31,8 @@ public class SingleTon : MonoBehaviour
     }
 
     // 레벨
-    int level = 1;
+    public int level = 1;
 
     // 재화
-    int coin = 0;
+    public int coin = 0;
 }

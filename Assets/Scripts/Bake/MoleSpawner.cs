@@ -9,20 +9,25 @@ public class MoleSpawner : MonoBehaviour
     [SerializeField]
     private float spawnTime;    // 두더지 등장 주기
     public int spawnCount = 0;     // 두더지 등장 횟수
-    public ToppingGrade toppingGrade;
+    public TotalGrade totalGrade;
     void Start()
     {
         StartCoroutine("SpawnMole");
     }
 
     private void Update() {
-        // 레벨이 ~이고 모든 두더지가 나왔다면
-        if(spawnCount == 10)
+        // 레벨이 1이고 모든 두더지가 나왔다면
+        if(SingleTon.Instance.level == 1 && spawnCount == 3)
         {
             // 모든 코루틴을 멈추고 등급 계산
             StopAllCoroutines();
-            toppingGrade.PrintGrade();
+            totalGrade.PrintGrade();
         }
+
+        // else if(SingleTon.Instance.level == 2 && spawnCount == 10)
+        // {
+
+        // }
     }
 
     private IEnumerator SpawnMole()
