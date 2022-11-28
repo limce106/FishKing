@@ -15,19 +15,9 @@ public class MoleSpawner : MonoBehaviour
         StartCoroutine("SpawnMole");
     }
 
-    private void Update() {
-        // 레벨이 1이고 모든 두더지가 나왔다면
-        if(SingleTon.Instance.level == 1 && spawnCount == 3)
-        {
-            // 모든 코루틴을 멈추고 등급 계산
-            StopAllCoroutines();
-            totalGrade.PrintGrade();
-        }
-
-        // else if(SingleTon.Instance.level == 2 && spawnCount == 10)
-        // {
-
-        // }
+    private void Update() 
+    {
+        AllMolesUp();
     }
 
     private IEnumerator SpawnMole()
@@ -38,6 +28,41 @@ public class MoleSpawner : MonoBehaviour
             moles[index].ChangeState(MoleState.MoveUp);
 
             yield return new WaitForSeconds(spawnTime);
+        }
+    }
+
+    private void AllMolesUp()
+    {
+        // 레벨이 1이고 모든 두더지가 나왔다면
+        if(SingleTon.Instance.level == 1 && spawnCount == 15)
+        {
+            // 모든 코루틴을 멈추고 등급 계산
+            StopAllCoroutines();
+            totalGrade.PrintGrade();
+        }
+
+        else if(SingleTon.Instance.level == 2 && spawnCount == 20)
+        {
+            StopAllCoroutines();
+            totalGrade.PrintGrade();
+        }
+
+        else if(SingleTon.Instance.level == 3 && spawnCount == 25)
+        {
+            StopAllCoroutines();
+            totalGrade.PrintGrade();
+        }
+
+        else if(SingleTon.Instance.level == 4 && spawnCount == 30)
+        {
+            StopAllCoroutines();
+            totalGrade.PrintGrade();
+        }
+
+        else if(SingleTon.Instance.level == 5 && spawnCount == 35)
+        {
+            StopAllCoroutines();
+            totalGrade.PrintGrade();
         }
     }
 }

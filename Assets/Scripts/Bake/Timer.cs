@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
             totalScore = GameObject.Find("DataMng").GetComponent<TotalScore>();
         }
         // 타이머 시간 설정
-        time = 3f;
+        time = 5f;
     }
 
     void Update()

@@ -2,38 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OrderTextScript : MonoBehaviour
 {
-    public Text ScriptTxt;
-    public int level;
+    public Text orderText;
 
     // Start is called before the first frame update
     void Start()
     {
-        ScriptTxt.text = "~咐 贺绢户 林技夸!";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(level == 1)
+        if(SingleTon.Instance.level == 1)
         {
-            ScriptTxt.text = "葡 贺绢户 林技夸!";
+            orderText.text = "葡 贺绢户 林技夸!";
         }
-        else if (level == 2)
+        else if (SingleTon.Instance.level == 2)
         {
-            ScriptTxt.text = "酱农覆 贺绢户 林技夸!";
+            orderText.text = "酱农覆 贺绢户 林技夸!";
         }
-        else if (level == 3)
+        else if (SingleTon.Instance.level == 3)
         {
-            ScriptTxt.text = "客荤厚  贺绢户 林技夸!";
+            orderText.text = "绊备付 贺绢户 林技夸!";
         }
-        else if (level == 4)
+        else if (SingleTon.Instance.level == 4)
         {
-            ScriptTxt.text = "凹扼档胶 贺绢户 林技夸!";
+            orderText.text = "客荤厚 贺绢户 林技夸!";
+        }
+        else if (SingleTon.Instance.level == 5)
+        {
+            orderText.text = "凹扼档胶 贺绢户 林技夸!";
         }
 
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Dough");
+        }
     }
 }
