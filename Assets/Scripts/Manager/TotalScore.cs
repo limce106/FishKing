@@ -74,6 +74,7 @@ public class TotalScore : MonoBehaviour
         if(totalScore >= 150)
         {
             SceneManager.LoadScene("GameClear");
+            SingleTon.Instance.level++;
         }
         else
         {

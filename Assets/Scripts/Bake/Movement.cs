@@ -8,8 +8,6 @@ public class Movement : MonoBehaviour
     private float moveSpeed = 0;
     private Vector3 moveDirection = Vector3.zero;
     
-    // 임의 레벨
-    int level = 1;
     void Start()
     {
         
@@ -17,8 +15,30 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if(level == 1)
-            moveSpeed = 1.5f;
+        if(SingleTon.Instance.level == 1)
+        {
+            moveSpeed = 2f;
+        }
+
+        else if(SingleTon.Instance.level == 2)
+        {
+            
+        }
+
+        else if(SingleTon.Instance.level == 3)
+        {
+
+        }
+
+        else if(SingleTon.Instance.level == 4)
+        {
+
+        }
+
+        else if(SingleTon.Instance.level == 5)
+        {
+
+        }
 
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
