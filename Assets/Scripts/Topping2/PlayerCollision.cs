@@ -10,13 +10,23 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       // if(other.tag.Equals("Obstacle"))
-       // {
-       //     gameController.GameOver();
-        //}
-         if (other.tag.Equals("Coin"))
+        if(other.tag.Equals("Obstacle"))
+        {
+            // Coin 수 감소
+            gameController.DecreaseCoinCount();
+        }
+
+        if (other.tag.Equals("Coin"))
         {
             gameController.IncreaseCoinCount();
         }
+
+        if (other.tag.Equals("Wall"))
+        {
+            // 게임 오버
+            gameController.GameOver();
+        }
+
+
     }
 }

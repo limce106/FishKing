@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private TextMeshProUGUI textCoinCount;
     private int coinCount = 0;
 
+
     public bool IsGameStart { private set; get; }
 
     private void Awake()
@@ -47,9 +48,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // 코인 수 감소
     public void IncreaseCoinCount()
     {
         coinCount++;
+        textCoinCount.text = coinCount.ToString();
+    }
+
+    // 코인 수 증가
+    public void DecreaseCoinCount()
+    {
+        coinCount -= 10;
         textCoinCount.text = coinCount.ToString();
     }
 

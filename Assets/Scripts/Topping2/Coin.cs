@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
     private GameObject coinEffectPrefab;
     private float rotateSpeed;
 
+
     private void Awake()
     {
         rotateSpeed = Random.Range(0, 360); // 임의의 숫자
