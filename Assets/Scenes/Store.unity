@@ -266,7 +266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50$
+  m_Text: 150$
 --- !u!222 &53499772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -893,7 +893,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 713103468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: Rainbow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &713103468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,7 +1581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50$
+  m_Text: 200$
 --- !u!222 &976427352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1781,7 +1793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50$
+  m_Text: 300$
 --- !u!222 &1007954339
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2277,7 +2289,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50$
+  m_Text: 100$
 --- !u!222 &1170923159
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2369,7 +2381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1176263753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: MintChoco
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1176263753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,7 +2657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534228583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: Ramen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534228583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2742,7 +2778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50$
+  m_Text: 250$
 --- !u!222 &1548375740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3002,7 +3038,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1686248174}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: Grass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686248174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,7 +3172,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712877831}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 1bb9776668202e548804e902c3315408, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: Pizza
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1712877831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3319,7 +3391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1867052473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930198711}
+        m_TargetAssemblyTypeName: BuyTopping, Assembly-CSharp
+        m_MethodName: Fish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1867052473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,6 +3521,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869205216}
   m_CullTransparentMesh: 1
+--- !u!1 &1930198710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930198712}
+  - component: {fileID: 1930198711}
+  m_Layer: 0
+  m_Name: BuyTopping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1930198711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930198710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb9776668202e548804e902c3315408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1930198712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930198710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 314.01212, y: 256.28268, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2028686657
 PrefabInstance:
   m_ObjectHideFlags: 0
