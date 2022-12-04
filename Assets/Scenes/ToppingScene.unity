@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 2071912270}
   - component: {fileID: 2071912269}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: ToppingGC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,6 +1413,8 @@ MonoBehaviour:
   textTitle: {fileID: 416798611}
   textTapToPlay: {fileID: 357499248}
   textCoinCount: {fileID: 1035616066}
+  coinCount: 0
+  <IsGameStart>k__BackingField: 0
 --- !u!4 &2071912270
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField]
-    private GameController gameController;
+    private ToppingGC gameController;
 
     private void OnTriggerEnter(Collider other)
     {
