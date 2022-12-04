@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class ToppingGC : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI textTitle;
@@ -13,7 +14,13 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI textCoinCount;
-    private int coinCount = 0;
+    public int coinCount = 0;
+    string toppingGrade = ""; // 토핑 완성도
+    public Text toppingGradeText; // 토핑 완성도 텍스트
+
+
+
+    TotalGrade totalGrade;
 
 
     public bool IsGameStart { private set; get; }
@@ -65,6 +72,22 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         // 현재 씬 다시 로드
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // 플레이어의 움직임 멈추기
+        IsGameStart = false;
+
+        if (coinCount >= 30)
+            toppingGrade = "S";
+        else if (coinCount >= 20)
+            toppingGrade = "A";
+        else
+            toppingGrade = "B";
+
+
+        toppingGradeText.text = toppingGrade + "급";
+        // 등급 보이게 하기
+       toppingGradeText.gameObject.SetActive(true);
+
     }
 }

@@ -16,6 +16,8 @@ public class TotalGrade : MonoBehaviour
     public string sab3;
     public bool isStageGrade = false;
 
+    private ToppingGC tgc;
+
     void Start()
     {
         if(SceneManager.GetActiveScene().name == "Dough")
@@ -73,6 +75,12 @@ public class TotalGrade : MonoBehaviour
         // 토핑 등급 계산
         else if(SceneManager.GetActiveScene().name == "Topping")
         {
+            if (tgc.coinCount >= 30)
+                sab3 = "S";
+            else if (tgc.coinCount >= 20)
+                sab3 = "A";
+            else
+                sab3 = "B";
 
             gradeText.text = sab3;
         }

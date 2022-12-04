@@ -4,7 +4,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField]
-    private GameController gameController; // ++ IsGameStart가 true일 때 움직이기 위해
+    private ToppingGC gameController; // ++ IsGameStart가 true일 때 움직이기 위해
 
 
     // x축 이동
