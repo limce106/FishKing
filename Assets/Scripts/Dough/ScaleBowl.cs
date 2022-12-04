@@ -8,11 +8,11 @@ public class ScaleBowl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) == true)
         {
-            transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+            transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
         }
         else 
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(0.38f, 0.38f, 0.38f);
         }
         
     }

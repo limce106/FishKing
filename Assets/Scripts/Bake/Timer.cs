@@ -48,7 +48,14 @@ public class Timer : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().name == "Dough")
             {
-                SceneManager.LoadScene("Bake");
+                if(SingleTon.Instance.level == 5)
+                {
+                    SceneManager.LoadScene("Bake2");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Bake1");
+                }
             }
             else if(SceneManager.GetActiveScene().name == "Bake")
             {

@@ -23,7 +23,7 @@ public class TotalGrade : MonoBehaviour
             dough = GameObject.Find("Dough").GetComponent<Dough>();
         }
 
-        if(SceneManager.GetActiveScene().name == "Bake")
+        if(SceneManager.GetActiveScene().name == "Bake1" || SceneManager.GetActiveScene().name == "Bake2")
         {
             moleSpawner = GameObject.Find("MoleSpawner").GetComponent<MoleSpawner>();
             hammer = GameObject.Find("Hammer").GetComponent<Hammer>();
@@ -55,7 +55,7 @@ public class TotalGrade : MonoBehaviour
         }
 
         // 굽기 등급 계산
-        else if(SceneManager.GetActiveScene().name == "Bake")
+        else if(SceneManager.GetActiveScene().name == "Bake1" || SceneManager.GetActiveScene().name == "Bake2")
         {
             // 두더지 잡을 확률
             chance = hammer.hitCount / moleSpawner.spawnCount * 100;
