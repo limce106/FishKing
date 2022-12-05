@@ -6,14 +6,24 @@ using UnityEngine.SceneManagement;
 public class TotalScore : MonoBehaviour
 {
     private TotalGrade tg;
-    private int score1;
-    private int score2;
-    private int score3;
-    private int totalScore;
+    public int score1;
+    public int score2;
+    public int score3;
 
     void Start()
     {
         tg = GetComponent<TotalGrade>();
+
+        if(SceneManager.GetActiveScene().name == "GameClearScene")
+        {
+            SingleTon.Instance.level += 1;
+            GetCoin();
+        }
+
+        if(SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            GetCoin();
+        }
     }
 
     void Update()
@@ -23,40 +33,55 @@ public class TotalScore : MonoBehaviour
 
     void CalScore()
     {
-        if(tg.sab1 == "S")
+        if(SingleTon.Instance.sab1 == "S")
             score1 = 90;
-        else if(tg.sab1 == "A")
+        else if(SingleTon.Instance.sab1 == "A")
             score1 = 60;
         else
             score1 = 30;
 
-        if(tg.sab2 == "S")
+        if(SingleTon.Instance.sab2 == "S")
             score2 = 90;
-        else if(tg.sab2 == "A")
+        else if(SingleTon.Instance.sab2 == "A")
             score2 = 60;
         else
             score2 = 30;   
 
-        if(tg.sab3 == "S")
+        if(SingleTon.Instance.sab3 == "S")
             score3 = 90;
-        else if(tg.sab3 == "A")
+        else if(SingleTon.Instance.sab3 == "A")
             score3 = 60;
         else
             score3 = 30;
     }
 
-    void CalTotal()
+    public void GameOverClear()
     {
         CalScore();
-        totalScore = score1 + score2 + score3;
+        SingleTon.Instance.totalScore = score1 + score2 + score3;
+        Debug.Log(SingleTon.Instance.totalScore);
 
+        if(SingleTon.Instance.totalScore > 120)
+        {
+            SceneManager.LoadScene("GameClearScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
+
+    void GetCoin()
+    {
+        Debug.Log(SingleTon.Instance.totalScore);
+        
         // 최종 점수에 따라 재화를 얻음
-        if(totalScore >= 240) // S S A
+        if(SingleTon.Instance.totalScore >= 240) // S S A
         {
             // 코인
             SingleTon.Instance.coin += 300;
         }
-        else if(totalScore >= 150) // A A B
+        else if(SingleTon.Instance.totalScore >= 150) // A A B
         {
             // 코인
             SingleTon.Instance.coin += 200;
@@ -65,20 +90,6 @@ public class TotalScore : MonoBehaviour
         {
             // 코인
             SingleTon.Instance.coin += 100;
-        }
-    }
-
-    public void GameOverClear()
-    {
-        CalTotal();
-        if(totalScore >= 150)
-        {
-            SceneManager.LoadScene("GameClearScene");
-            SingleTon.Instance.level++;
-        }
-        else
-        {
-            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

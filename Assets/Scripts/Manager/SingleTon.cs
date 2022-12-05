@@ -35,4 +35,12 @@ public class SingleTon : MonoBehaviour
 
     // 재화
     public int coin = 0;
+
+    // 스테이지별 점수
+    public string sab1;
+    public string sab2;
+    public string sab3;
+
+    // 최종 점수
+    public int totalScore;
 }
