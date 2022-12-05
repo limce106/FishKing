@@ -11,10 +11,8 @@ public class TotalGrade : MonoBehaviour
     public Text gradeText;
     private Dough dough;
     private ToppingGC tgc;
+    private TotalScore ts;
     private float chance;
-    public string sab1;
-    public string sab2;
-    public string sab3;
     public bool isStageGrade = false;
 
     void Start()
@@ -34,6 +32,8 @@ public class TotalGrade : MonoBehaviour
         {
             tgc = GameObject.Find("ToppingGC").GetComponent<ToppingGC>();
         }
+
+        ts = GetComponent<TotalScore>();
     }
 
     public void StageGrade()
@@ -41,23 +41,26 @@ public class TotalGrade : MonoBehaviour
         // 반죽 등급 계산
         if(SceneManager.GetActiveScene().name == "Dough")
         {
-            if (dough.spaceCount >= 30)
+            if (dough.spaceCount >= 50)
             {
-                sab1 = "S";
+                SingleTon.Instance.sab1 = "S";
+                //ts.score1 = 90;
                 Debug.Log("S"); ;
             }
-            else if (dough.spaceCount >= 20)
+            else if (dough.spaceCount >= 35)
             {
-                sab1 = "A";
+                SingleTon.Instance.sab1 = "A";
+                //ts.score1 = 60;
                 Debug.Log("A");
             }
             else
             {
-                sab1 = "B";
+                SingleTon.Instance.sab1 = "B";
+                //ts.score1 = 30;
                 Debug.Log("B");
             }
 
-            gradeText.text = sab1;
+            gradeText.text = SingleTon.Instance.sab1;
         }
 
         // 굽기 등급 계산
@@ -66,27 +69,36 @@ public class TotalGrade : MonoBehaviour
             // 두더지 잡을 확률
             chance = hammer.hitCount / moleSpawner.spawnCount * 100;
 
-            if(chance >= 90)
-                sab2 = "S";
-            else if(chance >= 70)
-                sab2 = "A";
+            if(chance >= 80)
+            {
+                SingleTon.Instance.sab2 = "S";
+                //ts.score2 = 90;
+            }
+            else if(chance >= 60)
+            {
+                SingleTon.Instance.sab2 = "A";
+                //ts.score2 = 60;
+            }
             else
-                sab2 = "B";
+            {
+                SingleTon.Instance.sab2 = "B";
+                //ts.score2 = 30;
+            }
 
-            gradeText.text = sab2;
+            gradeText.text = SingleTon.Instance.sab2;
         }
 
         // 토핑 등급 계산
         else if(SceneManager.GetActiveScene().name == "ToppingScene")
         {
             if (tgc.coinCount >= 30)
-                sab3 = "S";
+                SingleTon.Instance.sab3 = "S";
             else if (tgc.coinCount >= 20)
-                sab3 = "A";
+                SingleTon.Instance.sab3 = "A";
             else
-                sab3 = "B";
+                SingleTon.Instance.sab3 = "B";
 
-            gradeText.text = sab3;
+            gradeText.text = SingleTon.Instance.sab3;
         }
 
         gradeText.gameObject.SetActive(true);

@@ -39,19 +39,19 @@ public class Move : MonoBehaviour
         }
         else if (SingleTon.Instance.level == 2)
         {
-            moveSpeed = 15f;
+            moveSpeed = 12f;
         }
         else if (SingleTon.Instance.level == 3)
         {
-            moveSpeed = 20f;
+            moveSpeed = 14f;
         }
         else if (SingleTon.Instance.level == 4)
         {
-            moveSpeed = 25f;
+            moveSpeed = 16f;
         }
         else if (SingleTon.Instance.level == 5)
         {
-            moveSpeed = 30f;
+            moveSpeed = 18f;
         }
     }
 
