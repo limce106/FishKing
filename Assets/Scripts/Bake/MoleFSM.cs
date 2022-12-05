@@ -101,6 +101,9 @@ public class MoleFSM : MonoBehaviour
         // 이동 방향을 : (0, 1, 0) [위]
         movement3D.MoveTo(Vector3.up);
 
+        moleSpawner.spawnCount++;
+        Debug.Log(moleSpawner.spawnCount);
+
         while(true)
         {
             // 두더지의 y 위치가 limitMaxY에 도달하면 상태 변경
@@ -119,8 +122,6 @@ public class MoleFSM : MonoBehaviour
     {
         // 이동 방향을 : (0, -1, 0) [아래]
         movement3D.MoveTo(Vector3.down);
-
-        moleSpawner.spawnCount++;
 
         while(true)
         {
