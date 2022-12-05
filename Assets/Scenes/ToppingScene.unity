@@ -181,8 +181,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: fb07edca1e53cf14c8cba6d5c77637c0, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -861,9 +861,6 @@ MonoBehaviour:
   moleSpawner: {fileID: 0}
   hammer: {fileID: 0}
   gradeText: {fileID: 970784495}
-  sab1: 
-  sab2: 
-  sab3: 
   isStageGrade: 0
 --- !u!114 &800529165
 MonoBehaviour:
@@ -905,6 +902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a07a20fc020906478cbac77f4d9fb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score1: 0
+  score2: 0
+  score3: 0
 --- !u!1 &970784493
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fb07edca1e53cf14c8cba6d5c77637c0, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
