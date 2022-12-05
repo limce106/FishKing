@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTimeOnGround: 0.1
-  limitMinY: -0.3
-  limitMaxY: 0.1
+  limitMinY: 1.3
+  limitMaxY: 1.6
 --- !u!65 &7495908346265035895
 BoxCollider:
   m_ObjectHideFlags: 0
