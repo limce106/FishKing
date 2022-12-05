@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 476973654}
   - component: {fileID: 476973657}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1815164493}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: GotoOverBtn
+        m_MethodName: GotoStartBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 1565652701}
   - component: {fileID: 1565652704}
   m_Layer: 5
-  m_Name: Button
+  m_Name: EndButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1815164493}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: GotoStartBtn
+        m_MethodName: GameOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

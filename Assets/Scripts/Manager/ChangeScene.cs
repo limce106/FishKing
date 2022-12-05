@@ -25,4 +25,8 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Dough");
     }
+    public void GotoOrder()
+    {
+        SceneManager.LoadScene("OrderScene");
+    }
 }

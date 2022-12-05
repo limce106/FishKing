@@ -15,13 +15,7 @@ public class ToppingGC : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textCoinCount;
     public int coinCount = 0;
-    string toppingGrade = ""; // 토핑 완성도
-    public Text toppingGradeText; // 토핑 완성도 텍스트
-
-
-
-    TotalGrade totalGrade;
-
+    public TotalGrade tg;
 
     public bool IsGameStart { private set; get; }
 
@@ -55,18 +49,22 @@ public class ToppingGC : MonoBehaviour
         }
     }
 
-    // 코인 수 감소
+    // 코인 수 증가
     public void IncreaseCoinCount()
     {
-        coinCount++;
-        textCoinCount.text = coinCount.ToString();
+        coinCount ++;
+        textCoinCount.text = (coinCount * 100).ToString();
     }
 
-    // 코인 수 증가
+    // 코인 수 감소
     public void DecreaseCoinCount()
     {
         coinCount -= 10;
-        textCoinCount.text = coinCount.ToString();
+        if(coinCount < 0)
+        {
+            coinCount = 0;
+        }
+        textCoinCount.text = (coinCount * 100).ToString();
     }
 
     public void GameOver()
@@ -77,17 +75,6 @@ public class ToppingGC : MonoBehaviour
         // 플레이어의 움직임 멈추기
         IsGameStart = false;
 
-        if (coinCount >= 30)
-            toppingGrade = "S";
-        else if (coinCount >= 20)
-            toppingGrade = "A";
-        else
-            toppingGrade = "B";
-
-
-        toppingGradeText.text = toppingGrade + "급";
-        // 등급 보이게 하기
-       toppingGradeText.gameObject.SetActive(true);
-
+        tg.PrintGrade();
     }
 }

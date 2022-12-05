@@ -10,13 +10,12 @@ public class TotalGrade : MonoBehaviour
     public Hammer hammer;
     public Text gradeText;
     private Dough dough;
+    private ToppingGC tgc;
     private float chance;
     public string sab1;
     public string sab2;
     public string sab3;
     public bool isStageGrade = false;
-
-    private ToppingGC tgc;
 
     void Start()
     {
@@ -29,6 +28,11 @@ public class TotalGrade : MonoBehaviour
         {
             moleSpawner = GameObject.Find("MoleSpawner").GetComponent<MoleSpawner>();
             hammer = GameObject.Find("Hammer").GetComponent<Hammer>();
+        }
+
+        if(SceneManager.GetActiveScene().name == "ToppingScene")
+        {
+            tgc = GameObject.Find("ToppingGC").GetComponent<ToppingGC>();
         }
     }
 
@@ -73,7 +77,7 @@ public class TotalGrade : MonoBehaviour
         }
 
         // 토핑 등급 계산
-        else if(SceneManager.GetActiveScene().name == "Topping")
+        else if(SceneManager.GetActiveScene().name == "ToppingScene")
         {
             if (tgc.coinCount >= 30)
                 sab3 = "S";

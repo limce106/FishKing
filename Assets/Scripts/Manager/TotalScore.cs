@@ -18,9 +18,7 @@ public class TotalScore : MonoBehaviour
 
     void Update()
     {
-        CalScore();
-        CalTotal();
-        GameOverClear();
+        
     }
 
     void CalScore()
@@ -49,6 +47,7 @@ public class TotalScore : MonoBehaviour
 
     void CalTotal()
     {
+        CalScore();
         totalScore = score1 + score2 + score3;
 
         // 최종 점수에 따라 재화를 얻음
@@ -71,14 +70,15 @@ public class TotalScore : MonoBehaviour
 
     public void GameOverClear()
     {
+        CalTotal();
         if(totalScore >= 150)
         {
-            SceneManager.LoadScene("GameClear");
+            SceneManager.LoadScene("GameClearScene");
             SingleTon.Instance.level++;
         }
         else
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

@@ -19,10 +19,10 @@ public class Move : MonoBehaviour
     private bool isJump = false; // true : 점프 중, false : 점프 가능
 
     // z축 이동
-    [SerializeField]
-    private float moveSpeed = 20.0f; // 이동 속도(z축)
+    public float moveSpeed; // 이동 속도(z축)
 
     // 회전
+    [SerializeField]
     private float rotateSpeed = 300.0f; // 회전 속도
 
     private float limitY = -1.0f; // 플레이어가 사망했을 때 y의 위치
@@ -32,6 +32,27 @@ public class Move : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+
+        if(SingleTon.Instance.level == 1)
+        {
+            moveSpeed = 10f;
+        }
+        else if (SingleTon.Instance.level == 2)
+        {
+            moveSpeed = 15f;
+        }
+        else if (SingleTon.Instance.level == 3)
+        {
+            moveSpeed = 20f;
+        }
+        else if (SingleTon.Instance.level == 4)
+        {
+            moveSpeed = 25f;
+        }
+        else if (SingleTon.Instance.level == 5)
+        {
+            moveSpeed = 30f;
+        }
     }
 
 
@@ -52,6 +73,7 @@ public class Move : MonoBehaviour
         if( transform.position.y < limitY)
         {
             Debug.Log("게임오버");
+            gameController.GameOver();
         }
     }
 

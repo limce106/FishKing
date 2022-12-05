@@ -17,27 +17,27 @@ public class Movement : MonoBehaviour
     {
         if(SingleTon.Instance.level == 1)
         {
-            moveSpeed = 2f;
+            moveSpeed = 1.5f;
         }
 
         else if(SingleTon.Instance.level == 2)
         {
-            
+            moveSpeed = 1.7f;
         }
 
         else if(SingleTon.Instance.level == 3)
         {
-
+            moveSpeed = 2f;
         }
 
         else if(SingleTon.Instance.level == 4)
         {
-
+            moveSpeed = 2.2f;
         }
 
         else if(SingleTon.Instance.level == 5)
         {
-
+            moveSpeed = 2.4f;
         }
 
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
