@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GamePlayMng : MonoBehaviour
 {
-    AudioSource bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
-    public GameObject pauseButton;
+    AudioSource bgm;
+    GameObject pauseButton;
+
+    void Start()
+    {
+        bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+        if(SceneManager.GetActiveScene().name == "Dough")
+        pauseButton = GameObject.Find("pauseButton");
+    }
 
     // 재생/멈추기 버튼 함수
     public void PauseButton()
     {
+        Debug.Log(pauseButton.GetComponent<Image>().sprite.name);
         // 스프라이트가 일시정지이고 시간이 흐르고 있을 때 버튼을 누르면
         if (pauseButton.GetComponent<Image>().sprite.name == "Stop" && Time.timeScale == 1)
         {
