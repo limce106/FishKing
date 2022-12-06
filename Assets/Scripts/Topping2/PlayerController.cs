@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Move movement;
 
     public AudioClip audioJump;
+    public AudioClip audioMove;
     AudioSource audioSource;
 
     private void Awake()
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         if ( Mathf.Abs(touchEnd.x - touchStart.x) >= dragDistance )
         {
             movement.MoveToX((int)Mathf.Sign(touchEnd.x - touchStart.x));
+            audioSource.PlayOneShot(audioMove);
             return;
         }
 
