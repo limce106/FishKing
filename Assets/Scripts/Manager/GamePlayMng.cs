@@ -2,11 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GamePlayMng : MonoBehaviour
 {
-    AudioSource bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
-    public GameObject pauseButton;
+    AudioSource bgm;
+    GameObject pauseButton;
+
+    void Start()
+    {
+        bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+
+        if(SceneManager.GetActiveScene().name == "Dough" || SceneManager.GetActiveScene().name == "Bake1")
+        {
+            bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+            pauseButton = GameObject.Find("pauseButton");
+        }
+    }
 
     // 재생/멈추기 버튼 함수
     public void PauseButton()

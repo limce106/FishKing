@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bake1.unity
     guid: c143d7ddb1b2256459a6526afd06db6f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Bake2.unity
+    guid: ec1a0a86027ce58458f53d715d23841b
   - enabled: 1
     path: Assets/Scenes/ToppingScene.unity
     guid: 30adf8cf5e5224442b18fea638855a30

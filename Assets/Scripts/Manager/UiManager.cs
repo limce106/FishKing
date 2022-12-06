@@ -18,11 +18,7 @@ public class UiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SingleTon.Instance.level != 1)
-        {
-            int level = SingleTon.Instance.level;
-            levelText.text = "Level. " + SingleTon.Instance.level;
-        }
+        levelText.text = "Level. " + SingleTon.Instance.level;
 
         //if (SingleTon.Instance.level == 1)
         //{
@@ -45,11 +41,11 @@ public class UiManager : MonoBehaviour
         //    levelText.text = "Level.5";
         //}
 
-        if(SingleTon.Instance.coin != 0)
-        {
-            int coin = SingleTon.Instance.coin;
-            coinText.text = coin + "$";
-        }
-            
+        // if(SingleTon.Instance.coin != 0)
+        // {
+        //     int coin = SingleTon.Instance.coin;
+        //     coinText.text = coin + "$";
+        // }
+        coinText.text = SingleTon.Instance.coin + "$";   
     }
 }

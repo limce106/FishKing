@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd1b259dc3cfdf43bdfefdfe4b3329e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 5
   coin: 0
   sab1: 
   sab2: 
