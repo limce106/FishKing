@@ -13,7 +13,7 @@ public class ScaleBowl : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Time.timeScale == 1)
         {
             transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
             audioSource.PlayOneShot(audioDough);

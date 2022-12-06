@@ -14,7 +14,6 @@ public class GamePlayMng : MonoBehaviour
     void Start()
     {
         bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
-        if(SceneManager.GetActiveScene().name == "Dough")
         pauseButton = GameObject.Find("pauseButton");
         audioSource = this.gameObject.GetComponent<AudioSource>();
     }

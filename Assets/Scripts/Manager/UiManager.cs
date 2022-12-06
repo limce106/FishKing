@@ -19,33 +19,6 @@ public class UiManager : MonoBehaviour
     void Update()
     {
         levelText.text = "Level. " + SingleTon.Instance.level;
-
-        //if (SingleTon.Instance.level == 1)
-        //{
-        //    levelText.text = "Level.1";
-        //}
-        //else if (SingleTon.Instance.level == 2)
-        //{
-        //    levelText.text = "Level.2";
-        //}
-        //else if (SingleTon.Instance.level == 3)
-        //{
-        //    levelText.text = "Level.3";
-        //}
-        //else if (SingleTon.Instance.level == 4)
-        //{
-        //    levelText.text = "Level.4";
-        //}
-        //else if (SingleTon.Instance.level == 5)
-        //{
-        //    levelText.text = "Level.5";
-        //}
-
-        // if(SingleTon.Instance.coin != 0)
-        // {
-        //     int coin = SingleTon.Instance.coin;
-        //     coinText.text = coin + "$";
-        // }
         coinText.text = SingleTon.Instance.coin + "$";   
     }
 }

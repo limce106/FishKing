@@ -49,7 +49,7 @@ public class Dough : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) == true)
+        if (Input.GetKeyDown(KeyCode.Space) == true && Time.timeScale == 1)
         {
             Debug.Log("스페이스바 누름");
             Debug.Log(spaceCount);
