@@ -8,6 +8,14 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField]
     private ToppingGC gameController;
 
+    public AudioClip audioCoin;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag.Equals("Obstacle"))
@@ -19,6 +27,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.tag.Equals("Coin"))
         {
             gameController.IncreaseCoinCount();
+            audioSource.PlayOneShot(audioCoin);
         }
 
         if (other.tag.Equals("Wall"))

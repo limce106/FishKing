@@ -8,12 +8,15 @@ public class GamePlayMng : MonoBehaviour
 {
     AudioSource bgm;
     GameObject pauseButton;
+    public AudioClip audioButton;
+    AudioSource audioSource;
 
     void Start()
     {
         bgm = GameObject.Find("AudioManager").GetComponent<AudioSource>();
         if(SceneManager.GetActiveScene().name == "Dough")
         pauseButton = GameObject.Find("pauseButton");
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     // 재생/멈추기 버튼 함수
@@ -40,5 +43,7 @@ public class GamePlayMng : MonoBehaviour
             // bgm 재생
             bgm.Play();
         }
+
+        audioSource.PlayOneShot(audioButton);
     }
 }
