@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SingleTon : MonoBehaviour
 {
+
     // 변수 값을 유지하기 위한 싱글톤 스크립트
     static SingleTon instance = null;
     public static SingleTon Instance

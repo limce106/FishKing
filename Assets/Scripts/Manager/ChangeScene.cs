@@ -29,4 +29,8 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("OrderScene");
     }
+    public void GotoStore()
+    {
+        SceneManager.LoadScene("Store");
+    }
 }
