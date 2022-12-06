@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45cdeda3eb0244d8ad1e236e793b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dough: {fileID: 700327927}
   audioDough: {fileID: 8300000, guid: abce773efdfbb1949aa7f8f50abf72d8, type: 3}
 --- !u!1001 &419286490
 PrefabInstance:
