@@ -51,13 +51,16 @@ public class Dough : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) == true && Time.timeScale == 1)
         {
-            Debug.Log("스페이스바 누름");
-            Debug.Log(spaceCount);
-            spaceCount++;
-            spaceCountText.text = "누른 횟수 : " + spaceCount;
+            if(gameTime > 0)
+            {
+                Debug.Log("스페이스바 누름");
+                Debug.Log(spaceCount);
+                spaceCount++;
+                spaceCountText.text = "누른 횟수 : " + spaceCount;
 
-            Vector3 vec = new Vector3(0, 0, -0.1f);
-            transform.Translate(vec);
+                Vector3 vec = new Vector3(0, 0, -0.1f);
+                transform.Translate(vec);
+            }
         }
 
         if (gameTime > 0)
@@ -68,10 +71,8 @@ public class Dough : MonoBehaviour
         // 게임 중일때
         if (gameTime > 0)
         {
-            if (gameTime > 0)
-                gameTime -= Time.deltaTime;
-
-                timeText.text = "시간 : " + Mathf.Ceil(gameTime).ToString();
+            gameTime -= Time.deltaTime;
+            timeText.text = "시간 : " + Mathf.Ceil(gameTime).ToString();
         }
         else // 게임 오버 일 때
         {

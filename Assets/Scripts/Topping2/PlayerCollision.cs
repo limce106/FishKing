@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
     private ToppingGC gameController;
 
     public AudioClip audioCoin;
+    public AudioClip audioObstacle;
     AudioSource audioSource;
 
     void Start()
@@ -22,6 +23,7 @@ public class PlayerCollision : MonoBehaviour
         {
             // Coin 수 감소
             gameController.DecreaseCoinCount();
+            audioSource.PlayOneShot(audioObstacle);
         }
 
         if (other.tag.Equals("Coin"))
@@ -34,6 +36,7 @@ public class PlayerCollision : MonoBehaviour
         {
             // 게임 오버
             gameController.GameOver();
+            audioSource.PlayOneShot(audioObstacle);
         }
 
 

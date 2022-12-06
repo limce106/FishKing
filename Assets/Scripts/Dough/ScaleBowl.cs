@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScaleBowl : MonoBehaviour
 {
+    public Dough dough;
     public AudioClip audioDough;
     AudioSource audioSource;
 
