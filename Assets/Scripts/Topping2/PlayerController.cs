@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour
 
     private Move movement;
 
-    // Start is called before the first frame update
+    public AudioClip audioJump;
+    AudioSource audioSource;
+
     private void Awake()
     {
         movement = GetComponent<Move>();
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         OnPCPlatform();
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if( touchEnd.y - touchStart.y >= dragDistance)
         {
             movement.MoveToY();
+            audioSource.PlayOneShot(audioJump);
             return;
         }
     }

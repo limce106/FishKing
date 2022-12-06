@@ -12,8 +12,12 @@ public class TotalGrade : MonoBehaviour
     private Dough dough;
     private ToppingGC tgc;
     private TotalScore ts;
+    // 두더지 잡기 확률(굽기)
     private float chance;
+    // 등급 텍스트 활성화 여부
     public bool isStageGrade = false;
+    public AudioClip audioGrade;
+    AudioSource audioSource;
 
     void Start()
     {
@@ -34,6 +38,8 @@ public class TotalGrade : MonoBehaviour
         }
 
         ts = GetComponent<TotalScore>();
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     public void StageGrade()
@@ -108,5 +114,6 @@ public class TotalGrade : MonoBehaviour
     {
         Invoke("StageGrade", 1f);
         isStageGrade = true;
+        audioSource.PlayOneShot(audioGrade);
     }
 }
