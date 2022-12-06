@@ -504,7 +504,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227078539}
   m_CullTransparentMesh: 1
---- !u!1 &235703738
+--- !u!1 &263304154
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,10 +512,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 235703739}
-  - component: {fileID: 235703742}
-  - component: {fileID: 235703741}
-  - component: {fileID: 235703740}
+  - component: {fileID: 263304155}
+  - component: {fileID: 263304158}
+  - component: {fileID: 263304157}
+  - component: {fileID: 263304156}
   m_Layer: 5
   m_Name: pauseButton
   m_TagString: Untagged
@@ -523,32 +523,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &235703739
+--- !u!224 &263304155
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235703738}
+  m_GameObject: {fileID: 263304154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 869320373}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 582, y: 295}
+  m_AnchoredPosition: {x: 1222, y: 655}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &235703740
+--- !u!114 &263304156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235703738}
+  m_GameObject: {fileID: 263304154}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -582,7 +582,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 235703741}
+  m_TargetGraphic: {fileID: 263304157}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -598,13 +598,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &235703741
+--- !u!114 &263304157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235703738}
+  m_GameObject: {fileID: 263304154}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -628,13 +628,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &235703742
+--- !u!222 &263304158
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235703738}
+  m_GameObject: {fileID: 263304154}
   m_CullTransparentMesh: 1
 --- !u!1 &263676245
 GameObject:
@@ -1731,9 +1731,9 @@ RectTransform:
   - {fileID: 272255665}
   - {fileID: 227078540}
   - {fileID: 1902128384}
-  - {fileID: 235703739}
   - {fileID: 1164014974}
   - {fileID: 968407907}
+  - {fileID: 263304155}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1883,12 +1883,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 869320373}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -58, y: -35}
-  m_SizeDelta: {x: 122.686, y: 34.3899}
+  m_AnchoredPosition: {x: -79.27393, y: -677.9817}
+  m_SizeDelta: {x: 165.23, y: 76.4266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968407908
 MonoBehaviour:
@@ -2024,7 +2024,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 869320373}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
