@@ -22,7 +22,7 @@ public class ShakeCamera : MonoBehaviour
     // 외부에서 카메라 흔들림을 조작할 때 호출하는 메소드
     // ex) OnShakeCamera(1); => 1초간 0.1의 세기로 흔들림
     // ex) OnShakeCamera(0.5f, 1); => 0.5초간 1의 세기로 흔들림
-    public void OnShakeCamera(float shakeTime=1.0f, float shakeIntensity = 0.1f)
+    public void OnShakeCamera(float shakeTime=1.0f, float shakeIntensity = 1.2f)
     {
         this.shakeTime = shakeTime;
         this.shakeIntensity = shakeIntensity;
