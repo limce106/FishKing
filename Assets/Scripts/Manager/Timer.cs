@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     private void Awake () 
     {
         totalGrade = GameObject.Find("DataMng").GetComponent<TotalGrade>();
-        if(SceneManager.GetActiveScene().name == "ToppingScene")
+        if(SceneManager.GetActiveScene().name == "Bake1" || SceneManager.GetActiveScene().name == "Bake2")
         {
             totalScore = GameObject.Find("DataMng").GetComponent<TotalScore>();
         }
@@ -48,6 +48,10 @@ public class Timer : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().name == "Dough")
             {
+                SceneManager.LoadScene("ToppingScene");
+            }
+            else if(SceneManager.GetActiveScene().name == "ToppingScene")
+            {
                 if(SingleTon.Instance.level == 5)
                 {
                     SceneManager.LoadScene("Bake2");
@@ -58,10 +62,6 @@ public class Timer : MonoBehaviour
                 }
             }
             else if(SceneManager.GetActiveScene().name == "Bake1" || SceneManager.GetActiveScene().name == "Bake2")
-            {
-                SceneManager.LoadScene("ToppingScene");
-            }
-            else if(SceneManager.GetActiveScene().name == "ToppingScene")
             {
                 totalScore.GameOverClear();
             }
