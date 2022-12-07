@@ -1935,6 +1935,7 @@ GameObject:
   - component: {fileID: 1164014974}
   - component: {fileID: 1164014976}
   - component: {fileID: 1164014975}
+  - component: {fileID: 1164014977}
   m_Layer: 5
   m_Name: Grade
   m_TagString: Untagged
@@ -1974,7 +1975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0, b: 0.6269031, a: 1}
+  m_Color: {r: 0.9811321, g: 0.44313726, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2003,6 +2004,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164014973}
   m_CullTransparentMesh: 1
+--- !u!114 &1164014977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164014973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 7, y: 7}
+  m_UseGraphicAlpha: 1
 --- !u!114 &1164308518 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8891945811837119393, guid: 038e978a5c2942844a98ed550d02f314, type: 3}
