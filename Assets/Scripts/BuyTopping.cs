@@ -14,7 +14,7 @@ public class BuyTopping : MonoBehaviour
 
     public void Grass()
     {
-        if(SingleTon.Instance.coin > 0)
+        if(SingleTon.Instance.coin >= 50)
         {
             SingleTon.Instance.coin -= 50;
             audioSource.PlayOneShot(audioBuy);
@@ -23,7 +23,7 @@ public class BuyTopping : MonoBehaviour
     }
     public void MintChoco()
     {
-        if (SingleTon.Instance.coin > 0)
+        if (SingleTon.Instance.coin >= 100)
         {
             SingleTon.Instance.coin -= 100;
             audioSource.PlayOneShot(audioBuy);
@@ -31,7 +31,7 @@ public class BuyTopping : MonoBehaviour
     }
     public void Fish()
     {
-        if (SingleTon.Instance.coin > 0)
+        if (SingleTon.Instance.coin >= 150)
         {
             SingleTon.Instance.coin -= 150;
             audioSource.PlayOneShot(audioBuy);
@@ -39,7 +39,7 @@ public class BuyTopping : MonoBehaviour
     }
     public void Rainbow()
     {
-        if (SingleTon.Instance.coin > 0)
+        if (SingleTon.Instance.coin >= 200)
         {
             SingleTon.Instance.coin -= 200;
             audioSource.PlayOneShot(audioBuy);
@@ -47,7 +47,7 @@ public class BuyTopping : MonoBehaviour
     }
     public void Ramen()
     {
-        if (SingleTon.Instance.coin > 0)
+        if (SingleTon.Instance.coin >= 250)
         {
             SingleTon.Instance.coin -= 250;
             audioSource.PlayOneShot(audioBuy);
@@ -55,7 +55,7 @@ public class BuyTopping : MonoBehaviour
     }
     public void Pizza()
     {
-        if (SingleTon.Instance.coin > 0)
+        if (SingleTon.Instance.coin >= 300)
         {
             SingleTon.Instance.coin -= 300;
             audioSource.PlayOneShot(audioBuy);
