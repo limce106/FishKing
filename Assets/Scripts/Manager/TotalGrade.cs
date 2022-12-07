@@ -69,6 +69,19 @@ public class TotalGrade : MonoBehaviour
             gradeText.text = SingleTon.Instance.sab1;
         }
 
+        // 토핑 등급 계산
+        else if(SceneManager.GetActiveScene().name == "ToppingScene")
+        {
+            if (tgc.coinCount >= 30)
+                SingleTon.Instance.sab2 = "S";
+            else if (tgc.coinCount >= 20)
+                SingleTon.Instance.sab2 = "A";
+            else
+                SingleTon.Instance.sab2 = "B";
+
+            gradeText.text = SingleTon.Instance.sab2;
+        }
+
         // 굽기 등급 계산
         else if(SceneManager.GetActiveScene().name == "Bake1" || SceneManager.GetActiveScene().name == "Bake2")
         {
@@ -77,32 +90,16 @@ public class TotalGrade : MonoBehaviour
 
             if(chance >= 80)
             {
-                SingleTon.Instance.sab2 = "S";
-                //ts.score2 = 90;
+                SingleTon.Instance.sab3 = "S";
             }
             else if(chance >= 60)
             {
-                SingleTon.Instance.sab2 = "A";
-                //ts.score2 = 60;
+                SingleTon.Instance.sab3 = "A";
             }
             else
             {
-                SingleTon.Instance.sab2 = "B";
-                //ts.score2 = 30;
-            }
-
-            gradeText.text = SingleTon.Instance.sab2;
-        }
-
-        // 토핑 등급 계산
-        else if(SceneManager.GetActiveScene().name == "ToppingScene")
-        {
-            if (tgc.coinCount >= 30)
-                SingleTon.Instance.sab3 = "S";
-            else if (tgc.coinCount >= 20)
-                SingleTon.Instance.sab3 = "A";
-            else
                 SingleTon.Instance.sab3 = "B";
+            }
 
             gradeText.text = SingleTon.Instance.sab3;
         }
