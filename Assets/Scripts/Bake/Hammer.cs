@@ -15,9 +15,13 @@ public class Hammer : MonoBehaviour
     private Movement movement3D;
     public int hitCount = 0;   // 두더지 타격 횟수
 
+    public AudioClip audioHit;
+    AudioSource audioSource;
+
     private void Awake() 
     {
         movement3D = GetComponent<Movement>();
+        audioSource = this.gameObject.GetComponent<AudioSource>();
 
         // OnHit 메소드를 ObjectDectector 클래스의 raycastEvent에 이벤트로 등록
         objectDectector.raycastEvent.AddListener(OnHit);
@@ -49,6 +53,8 @@ public class Hammer : MonoBehaviour
 
             // 두더지 타격 횟수 증가
             hitCount++;
+
+            audioSource.PlayOneShot(audioHit);
 
             // 망치를 위로 이동
             StartCoroutine("MoveUp");

@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: d3a1d5daa6881aa428c0f9838b9cb59b
   - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 316b3ef39705faa4a89a154a31a1edf4
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 4d8e8ee17a9142242a30ed8cc8a5d2cf
+  - enabled: 1
     path: Assets/Scenes/OrderScene.unity
     guid: 65080532f9a6fdc4a9749334ae24dd96
   - enabled: 1
@@ -29,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: b0147f79e684b424cb95440bca75b2bb
-  - enabled: 1
-    path: Assets/Scenes/Store.unity
-    guid: 316b3ef39705faa4a89a154a31a1edf4
   m_configObjects: {}
