@@ -35,7 +35,14 @@ public class ChangeScene : MonoBehaviour
     }
     public void GotoDough()
     {
-        SceneManager.LoadScene("Dough");
+        if(SingleTon.Instance.level == 1)
+        {
+            SceneManager.LoadScene("TutorialScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("Dough");
+        }
         audioSource.PlayOneShot(audioButton);
     }
     public void GotoOrder()
@@ -46,6 +53,11 @@ public class ChangeScene : MonoBehaviour
     public void GotoStore()
     {
         SceneManager.LoadScene("Store");
+        audioSource.PlayOneShot(audioButton);
+    }
+    public void GotoDough2()
+    {
+        SceneManager.LoadScene("Dough");
         audioSource.PlayOneShot(audioButton);
     }
 }
