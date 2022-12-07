@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 555773340}
   - component: {fileID: 555773339}
   m_Layer: 5
-  m_Name: ToppingTutorialText
+  m_Name: BakeTutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 1350720150}
   - component: {fileID: 1350720149}
   m_Layer: 5
-  m_Name: BakeTutorialText
+  m_Name: ToppingTutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
     \uC88C,\uC6B0,\uC704\uB85C \uB4DC\uB798\uADF8\uD558\uC5EC \uC7A5\uC560\uBB3C\uC744\n\t\uD53C\uD574
     \uBD95\uC5B4\uBE75 \uC548\uC758 \uD1A0\uD551\uC744 \uD68D\uB4DD\uD574\uC8FC\uC138\uC694.\r\n\n2.
     \uC7A5\uC560\uBB3C\uACFC \uCDA9\uB3CC \uC2DC, \uD68D\uB4DD\uD55C \uD1A0\uD551\uC758
-    \uAC2F\uC218\uAC00\n\t10\uB9CC\uD07C \uC904\uC5B4\uB4ED\uB2C8\uB2E4.\r\n\n3.
+    \uAC2F\uC218\uAC00\n\t1000\uB9CC\uD07C \uC904\uC5B4\uB4ED\uB2C8\uB2E4.\r\n\n3.
     \uD68D\uB4DD\uD55C \uD1A0\uD551 \uAC2F\uC218\uC5D0 \uB530\uB77C \uD1A0\uD551\uC758\n\t\uC644\uC131\uB3C4\uAC00
     \uC815\uD574\uC9D1\uB2C8\uB2E4.\r\n\n4. \uC2A4\uD14C\uC774\uC9C0\uAC00 \uC62C\uB77C\uAC08\uC218\uB85D
     \uBD95\uC5B4\uBE75\uC758 \uC18D\uB3C4\uAC00\n\t\uBE68\uB77C\uC9D1\uB2C8\uB2E4.\r
